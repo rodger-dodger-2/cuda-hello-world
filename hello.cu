@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 __global__ void hello_kernel(int total_threads) {
-    int tid = blockIdx.x * blockDim.x + threadIdx.x * threadIdx.x;
+    int tid = blockIdx.x * blockDim.x + threadIdx.x;
     printf("  [thread %2d / %d] Hello from the GPU!\n", tid, total_threads);
 }
 
